@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monalisa Interativa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Monalisa Interativa</h1>
+        <p class="subtitle">Os olhos acompanham o seu mouse!</p>
+        
+        <div class="canvas-wrapper">
+            <svg viewBox="0 0 400 500" class="monalisa-svg">
+                <!-- Fundo -->
+                <rect width="400" height="500" fill="#C4A57B"/>
+                
+                <!-- Paisagem ao fundo -->
+                <path d="M 0 250 Q 100 200 200 220 Q 300 240 400 200 L 400 500 L 0 500 Z" fill="#8B7355"/>
+                <path d="M 0 280 Q 150 250 300 270 Q 350 280 400 260 L 400 500 L 0 500 Z" fill="#A0826D"/>
+                
+                <!-- Corpo -->
+                <ellipse cx="200" cy="350" rx="90" ry="120" fill="#8B6F47"/>
+                
+                <!-- Braço direito -->
+                <path d="M 200 280 Q 150 300 140 380" stroke="#A0826D" stroke-width="35" fill="none" stroke-linecap="round"/>
+                
+                <!-- Braço esquerdo -->
+                <path d="M 200 280 Q 250 300 260 380" stroke="#A0826D" stroke-width="35" fill="none" stroke-linecap="round"/>
+                
+                <!-- Pescoço -->
+                <rect x="180" y="220" width="40" height="60" fill="#D4A574"/>
+                
+                <!-- Cabeça -->
+                <ellipse cx="200" cy="160" rx="70" ry="80" fill="#D4A574"/>
+                
+                <!-- Cabelo -->
+                <path d="M 130 130 Q 120 100 140 80 Q 160 60 200 50 Q 240 60 260 80 Q 280 100 270 130 Z" fill="#8B6F47"/>
+                <path d="M 200 50 Q 220 45 240 55 Q 260 70 265 90" fill="#8B6F47"/>
+                
+                <!-- Orelha -->
+                <ellipse cx="130" cy="160" rx="18" ry="25" fill="#D4A574"/>
+                <ellipse cx="130" cy="160" rx="10" ry="15" fill="#C9956F"/>
+                
+                <!-- Orelha direita -->
+                <ellipse cx="270" cy="160" rx="18" ry="25" fill="#D4A574"/>
+                <ellipse cx="270" cy="160" rx="10" ry="15" fill="#C9956F"/>
+                
+                <!-- Olho esquerdo (container) -->
+                <g class="eye-group left-eye">
+                    <ellipse cx="165" cy="140" rx="15" ry="20" fill="#FFFFFF"/>
+                    <circle class="pupil" cx="165" cy="145" r="8" fill="#8B4513"/>
+                    <circle class="pupil-shine" cx="167" cy="142" r="3" fill="#FFFFFF"/>
+                </g>
+                
+                <!-- Olho direito (container) -->
+                <g class="eye-group right-eye">
+                    <ellipse cx="235" cy="140" rx="15" ry="20" fill="#FFFFFF"/>
+                    <circle class="pupil" cx="235" cy="145" r="8" fill="#8B4513"/>
+                    <circle class="pupil-shine" cx="237" cy="142" r="3" fill="#FFFFFF"/>
+                </g>
+                
+                <!-- Sobrancelha esquerda -->
+                <path d="M 150 125 Q 165 115 180 120" stroke="#8B6F47" stroke-width="3" fill="none" stroke-linecap="round"/>
+                
+                <!-- Sobrancelha direita -->
+                <path d="M 220 120 Q 235 115 250 125" stroke="#8B6F47" stroke-width="3" fill="none" stroke-linecap="round"/>
+                
+                <!-- Nariz -->
+                <path d="M 200 130 L 200 160 L 195 165" stroke="#C9956F" stroke-width="2" fill="none" stroke-linecap="round"/>
+                
+                <!-- Boca - O sorriso enigmático -->
+                <path d="M 170 190 Q 200 210 230 190" stroke="#A0715F" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <path d="M 170 190 Q 200 205 230 190" fill="#D4A574" opacity="0.5"/>
+                
+                <!-- Mãos -->
+                <!-- Mão esquerda -->
+                <ellipse cx="140" cy="380" rx="20" ry="28" fill="#D4A574" transform="rotate(-30 140 380)"/>
+                
+                <!-- Mão direita -->
+                <ellipse cx="260" cy="380" rx="20" ry="28" fill="#D4A574" transform="rotate(30 260 380)"/>
+                
+                <!-- Elementos de destaque -->
+                <circle cx="140" cy="320" r="8" fill="#C9956F" opacity="0.3"/>
+                <circle cx="260" cy="320" r="8" fill="#C9956F" opacity="0.3"/>
+            </svg>
+        </div>
+        
+        <div class="info">
+            <h2>Sobre a Monalisa</h2>
+            <p>A Monalisa é uma das pinturas mais famosas do mundo, criada por Leonardo da Vinci. 
+            Conhecida pelo seu sorriso enigmático e pelo efeito dos olhos que parecem acompanhar o observador 
+            onde quer que ele vá. Nesta versão interativa, os olhos realmente seguem seu mouse!</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
